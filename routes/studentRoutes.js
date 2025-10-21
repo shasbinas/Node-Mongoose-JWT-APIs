@@ -7,22 +7,24 @@ import {
   deleteStudent,
 } from '../controllers/studentController.js';
 import { protect, admin } from '../middleware/authMiddleware.js';
+import { studentUpdateValidation, studentValidation } from '../validations/studentValidation.js';
+import { validate } from '../middleware/validateMiddleware.js'; // ✅ import validate
 
 const router = express.Router();
 
-// POST /api/students → Add new student (protected)
-router.post('/', protect, addStudent);
+// ✅ POST → Add new student (protected + validated)
+router.post('/', protect, validate(studentValidation), addStudent);
 
-// GET /api/students → Get all students
-router.get('/', getStudents);
+// ✅ GET → All students (public or protected based on your choice)
+router.get('/',protect, getStudents);
 
-// GET /api/students/:id/marks → Get marks of specific student
+// ✅ GET → Marks of a specific student (protected)
 router.get('/:id/marks', protect, getStudentMarks);
 
-// PUT /api/students/:id → Update student info
-router.put('/:id', protect, updateStudent);
+// ✅ PUT → Update student info (protected)
+router.put('/:id', protect,validate(studentUpdateValidation),  updateStudent);
 
-// DELETE /api/students/:id → Delete student (admin only)
+// ✅ DELETE → Delete student (admin only)
 router.delete('/:id', protect, admin, deleteStudent);
 
 export default router;
