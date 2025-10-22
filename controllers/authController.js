@@ -80,8 +80,6 @@ export const getUsers = async (req, res, next) => {
 
 
 
-
-
 // Get single user by _id: /api/users/:id (public)
 export const getUserByIdPublic = async (req, res, next) => {
   try {
