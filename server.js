@@ -1,7 +1,7 @@
 import express from 'express';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
-import cookieParser from 'cookie-parser';
+// import cookieParser from 'cookie-parser';
 import connectDB from './config/db.js';
 
 import authRoutes from './routes/authRoutes.js';
@@ -16,7 +16,7 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cookieParser());
+// app.use(cookieParser());
 app.use(morgan('dev'));
 
 // Debug
