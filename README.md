@@ -27,6 +27,7 @@ A secure REST APIs built using Node.js, Express, and MongoDB with JWT authentica
 - [📦 Quick Start](#-quick-start)
 - [🚀 Deployment on Render](#-deployment-on-render)
 - [📬 Postman Collection](#-postman-collection)
+- [📡 Swagger API documentation]( #swagger-api-documentation)
 
 ## 📖 Introduction
 
@@ -122,7 +123,7 @@ The Postman collection JSON file is available in the repo under the `postman` fo
 
 ---
 
-## swagger API documetation
+## Swagger API documentation
 ```
 {
   "swagger": "2.0",
