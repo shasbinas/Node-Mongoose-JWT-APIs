@@ -1,0 +1,601 @@
+{
+	"info": {
+		"_postman_id": "61c721fe-f56d-4529-9de1-9705dd855cb6",
+		"name": "rest api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47561032"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"username\": \"vahab\",\r\n  \"email\": \"vahab@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"user\",\r\n  \"age\": 22\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://node-mongoose-jwt-apis.onrender.com/api/register",
+							"protocol": "https",
+							"host": [
+								"node-mongoose-jwt-apis",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"email\": \"Shasbin@gmail.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://node-mongoose-jwt-apis.onrender.com/api/login",
+							"protocol": "https",
+							"host": [
+								"node-mongoose-jwt-apis",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZjY2NWRhN2MyYWU1YjNlMjBkNTA1NCIsImlhdCI6MTc2MTAzNTkzOSwiZXhwIjoxNzYxMjk1MTM5fQ.x1OWYz5yE4W5R8YxxYoKjeTbP-4pAXdHxRQKQ7QXu_A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://node-mongoose-jwt-apis.onrender.com/api/users",
+							"protocol": "https",
+							"host": [
+								"node-mongoose-jwt-apis",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Zjc5OTY1OGE1YjI2Mjc2MjY2YzhiYyIsImlhdCI6MTc2MTExOTI4NSwiZXhwIjoxNzYxMzc4NDg1fQ.Fj8yIku45divbCQGHSRswbuzQVrGoPLY8Qzfs_2zQnM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://node-mongoose-jwt-apis.onrender.com/api/users/68f88bca5fb145173475d2ed",
+							"protocol": "https",
+							"host": [
+								"node-mongoose-jwt-apis",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"68f88bca5fb145173475d2ed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user id filter with age",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Zjc5OTY1OGE1YjI2Mjc2MjY2YzhiYyIsImlhdCI6MTc2MTExOTI4NSwiZXhwIjoxNzYxMzc4NDg1fQ.Fj8yIku45divbCQGHSRswbuzQVrGoPLY8Qzfs_2zQnM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://node-mongoose-jwt-apis.onrender.com/api/users?age=22\n",
+							"protocol": "https",
+							"host": [
+								"node-mongoose-jwt-apis",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "age",
+									"value": "22\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user id filter with role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Zjc5OTY1OGE1YjI2Mjc2MjY2YzhiYyIsImlhdCI6MTc2MTExOTI4NSwiZXhwIjoxNzYxMzc4NDg1fQ.Fj8yIku45divbCQGHSRswbuzQVrGoPLY8Qzfs_2zQnM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://node-mongoose-jwt-apis.onrender.com/api/users?role=user\n",
+							"protocol": "https",
+							"host": [
+								"node-mongoose-jwt-apis",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "role",
+									"value": "user\n"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "addproduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Zjc5OTY1OGE1YjI2Mjc2MjY2YzhiYyIsImlhdCI6MTc2MTA1NzEyNSwiZXhwIjoxNzYxMzE2MzI1fQ.FOgoitRGuKS3NlL-RlPSMiWMjDEZdcb452U4YjZZ7oQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Avengers\",\r\n  \"author\": \"Kevin Fiege\",\r\n  \"price\": 2500,\r\n  \"category\": \"Action\",\r\n  \"publisher\": \"Marvel\",\r\n  \"isbn\": \"9782222222222\",\r\n  \"stock\": -3\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://node-mongoose-jwt-apis.onrender.com/api/products",
+							"protocol": "https",
+							"host": [
+								"node-mongoose-jwt-apis",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get product by price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://node-mongoose-jwt-apis.onrender.com/api/products?minPrice=2000\n\n",
+							"protocol": "https",
+							"host": [
+								"node-mongoose-jwt-apis",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "minPrice",
+									"value": "2000\n\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get product by category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/products?category=Fiction\n",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Fiction\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://node-mongoose-jwt-apis.onrender.com/api/products",
+							"protocol": "https",
+							"host": [
+								"node-mongoose-jwt-apis",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Zjc5OTY1OGE1YjI2Mjc2MjY2YzhiYyIsImlhdCI6MTc2MTA1NzEyNSwiZXhwIjoxNzYxMzE2MzI1fQ.FOgoitRGuKS3NlL-RlPSMiWMjDEZdcb452U4YjZZ7oQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"X-Men: Apocalypse\"\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://node-mongoose-jwt-apis.onrender.com/api/products/68f79f4569e38fa105edb81d",
+							"protocol": "https",
+							"host": [
+								"node-mongoose-jwt-apis",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"products",
+								"68f79f4569e38fa105edb81d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZjY2NWRhN2MyYWU1YjNlMjBkNTA1NCIsImlhdCI6MTc2MTAzNzc2MSwiZXhwIjoxNzYxMjk2OTYxfQ.VQEnjGYRIzIJ8tFEfdAWlz8RZttuQTxeqnDci2i3ZfY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://node-mongoose-jwt-apis.onrender.com/api/products/68f74af8fa34b84f1a79dfa8",
+							"protocol": "https",
+							"host": [
+								"node-mongoose-jwt-apis",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"products",
+								"68f74af8fa34b84f1a79dfa8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "add students",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZjY2NWRhN2MyYWU1YjNlMjBkNTA1NCIsImlhdCI6MTc2MTAzNzc2MSwiZXhwIjoxNzYxMjk2OTYxfQ.VQEnjGYRIzIJ8tFEfdAWlz8RZttuQTxeqnDci2i3ZfY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"shazz\",\r\n  \"marks\": 55,\r\n  \"class\": \"10A\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://node-mongoose-jwt-apis.onrender.com/api/students",
+							"protocol": "https",
+							"host": [
+								"node-mongoose-jwt-apis",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get student by class",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://node-mongoose-jwt-apis.onrender.com/api/students?class=10B",
+							"protocol": "https",
+							"host": [
+								"node-mongoose-jwt-apis",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"students"
+							],
+							"query": [
+								{
+									"key": "class",
+									"value": "10B"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get mark of students",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZjY2NWRhN2MyYWU1YjNlMjBkNTA1NCIsImlhdCI6MTc2MTAzOTg1MSwiZXhwIjoxNzYxMjk5MDUxfQ.p3kO_uP8rmKn-Pyw2pPUIOmuRzUv7A0QPQ2HaEuKAfQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://node-mongoose-jwt-apis.onrender.com/api/students/68f75339b369b1c9cc93b492/marks",
+							"protocol": "https",
+							"host": [
+								"node-mongoose-jwt-apis",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"students",
+								"68f75339b369b1c9cc93b492",
+								"marks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZjY2NWRhN2MyYWU1YjNlMjBkNTA1NCIsImlhdCI6MTc2MTAzOTg1MSwiZXhwIjoxNzYxMjk5MDUxfQ.p3kO_uP8rmKn-Pyw2pPUIOmuRzUv7A0QPQ2HaEuKAfQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Shazz Updated\",\r\n  \"marks\": 88,\r\n  \"class\": \"10C\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/students/68f75339b369b1c9cc93b492",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"students",
+								"68f75339b369b1c9cc93b492"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletestudent",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZjY2NWRhN2MyYWU1YjNlMjBkNTA1NCIsImlhdCI6MTc2MTAzOTg1MSwiZXhwIjoxNzYxMjk5MDUxfQ.p3kO_uP8rmKn-Pyw2pPUIOmuRzUv7A0QPQ2HaEuKAfQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://node-mongoose-jwt-apis.onrender.com/api/students/68f75339b369b1c9cc93b492",
+							"protocol": "https",
+							"host": [
+								"node-mongoose-jwt-apis",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"students",
+								"68f75339b369b1c9cc93b492"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

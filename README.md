@@ -17,13 +17,12 @@ A secure REST APIs built using Node.js, Express, and MongoDB with JWT authentica
 
 ## 🧭 Table of Contents
 
-- [Introduction](#introduction)
+- [📖 Introduction](#-introduction)
 - [⚙ Tech Stack](#-tech-stack)
 - [🔋 Features](#-features)
 - [📦 Quick Start](#-quick-start)
-
-
----
+- [🚀 Deployment on Render](#-deployment-on-render)
+- [📬 Postman Collection](#-postman-collection)
 
 ## 📖 Introduction
 
@@ -102,4 +101,20 @@ Server will run on:
 👉 **http://localhost:5000**
 
 ---
+
+
+## 🌍 Live Demo
+
+🚀 **Deployed on Render:**  
+🔗 [https://node-mongoose-jwt-apis.onrender.com](https://node-mongoose-jwt-apis.onrender.com)
+
+You can test all available endpoints directly via the Postman collection below.
+
+---
+
+## 📬 Postman Collection
+
+The Postman collection JSON file is available in the repo under the `postman` folder
+
+
 If you like this project, **please ⭐ star the repo!**
