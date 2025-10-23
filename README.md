@@ -1,4 +1,4 @@
-# 🛠️ Node-Mongoose-JWT-APIs
+# ⚙  Node-Mongoose-JWT-APIs
 
 A secure REST APIs built using Node.js, Express, and MongoDB with JWT authentication, role-based access, and CRUD operations for Users, Products, and Students.
 
