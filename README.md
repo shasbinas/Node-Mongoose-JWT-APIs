@@ -1,7 +1,17 @@
 # 🛠️ Node-Mongoose-JWT-APIs
 
-A **RESTful API** built with **Node.js**, **Express**, and **MongoDB (Mongoose)** implementing **authentication** and **authorization** using **JWT (JSON Web Tokens)**.  
-This backend serves as a complete system for managing **Users**, **Products**, and **Students**, featuring **role-based access control**, **secure endpoints**, and **data validation**.
+A secure REST APIs built using Node.js, Express, and MongoDB with JWT authentication, role-based access, and CRUD operations for Users, Products, and Students.
+
+<div>
+  <img src="https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/-Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js" />
+  <img src="https://img.shields.io/badge/-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB + Mongoose" />
+  <img src="https://img.shields.io/badge/-JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" alt="JWT (Authentication)" />
+  <img src="https://img.shields.io/badge/-bcryptjs-003366?style=for-the-badge&logo=security&logoColor=white" alt="bcryptjs" />
+  <img src="https://img.shields.io/badge/-dotenv-009639?style=for-the-badge&logo=dotenv&logoColor=white" alt="dotenv" />
+  <img src="https://img.shields.io/badge/-Joi-FFB703?style=for-the-badge&logo=javascript&logoColor=black" alt="Joi Validation" />
+</div>
+
 
 ---
 
@@ -10,9 +20,7 @@ This backend serves as a complete system for managing **Users**, **Products**, a
 - [Introduction](#introduction)
 - [⚙ Tech Stack](#-tech-stack)
 - [🔋 Features](#-features)
-- [🌐 Deployment](#-deployment)
 - [📦 Quick Start](#-quick-start)
-- [📡 API Documentation](#-api-documentation)
 
 
 ---
@@ -55,21 +63,6 @@ It provides a ready-to-use backend for projects that need **user management**, *
 ✅ **Environment Config Support (.env)**  
 
 ---
-
-## 🌐 Deployment
-
-You can deploy this API on:
-- **Render**
-- **Vercel (Serverless)**
-- **Railway**
-- **Heroku**
-
-Make sure to set your `.env` variables in the deployment dashboard.
-
----
-
-
-
 ## 📦 Quick Start (Setup Guide)
 
 ### 1️⃣ Clone the repository
