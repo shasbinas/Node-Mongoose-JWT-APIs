@@ -13,7 +13,11 @@ A secure REST APIs built using Node.js, Express, and MongoDB with JWT authentica
   <a href="https://node-mongoose-jwt-apis.onrender.com" target="_blank">
     <img src="https://img.shields.io/badge/-Render-FF6C37?style=for-the-badge&logo=render&logoColor=white" alt="Render Deployment" />
   </a>
+  <a href="https://node-mongoose-jwt-apis.onrender.com/api-docs" target="_blank">
+    <img src="https://img.shields.io/badge/-Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black" alt="Swagger API Docs" />
+  </a>
 </div>
+
 
 
 
