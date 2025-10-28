@@ -9,11 +9,6 @@ const productSchema = new mongoose.Schema(
     publisher: { type: String },
     isbn: { type: String, unique: true },
     stock: { type: Number, default: 0, min: 0 },
-    createdBy: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-      required: true,
-    },
   },
   { timestamps: true }
 );
